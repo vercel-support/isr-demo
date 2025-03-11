@@ -47,8 +47,11 @@ export default function ClientSSRTime() {
         const timestamp = Date.now()
         const uniqueParam = `${timestamp}-${Math.random().toString(36).substring(2, 10)}`
         
-        // Fetch data from the API route with URL timestamp
-        const response = await fetch(`/api/ssr-time?t=${timestamp}&u=${uniqueParam}&url_t=${urlTimestamp}`, {
+        // Get the origin for absolute URL
+        const origin = window.location.origin
+        
+        // Fetch data from the API route with URL timestamp using absolute URL
+        const response = await fetch(`${origin}/api/ssr-time?t=${timestamp}&u=${uniqueParam}&url_t=${urlTimestamp}`, {
           cache: 'no-store'
         })
         

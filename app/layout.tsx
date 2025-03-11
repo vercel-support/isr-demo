@@ -7,8 +7,8 @@ import { MainNav } from "@/components/main-nav"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Next.js Data Fetching Strategies",
-  description: "A demonstration of different data fetching strategies in Next.js",
+  title: "Next.js Render Methods",
+  description: "A demonstration of different rendering methods in Next.js",
 }
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <header className="border-b">
             <div className="container mx-auto py-4">
-              <h1 className="text-3xl font-bold text-center mb-6">Next.js Data Fetching Strategies</h1>
+              <h1 className="text-3xl font-bold text-center mb-6">Next.js Render Methods</h1>
               <MainNav />
             </div>
           </header>

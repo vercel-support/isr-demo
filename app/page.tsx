@@ -7,8 +7,9 @@ import { ReloadButton } from "@/components/reload-button"
 import ClientSSRTime from "@/components/client-ssr-time"
 import type { Metadata } from "next"
 
+
 // For the home page, we'll use a shorter revalidation time
-export const revalidate = 5
+export const revalidate = 10
 
 // Add metadata generation to ensure proper revalidation
 export async function generateMetadata(props: { 
@@ -48,9 +49,9 @@ export default async function Home(props: {
   
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold text-center my-8">Next.js Data Fetching Demo</h1>
       <div className="flex justify-center mb-4">
         <ReloadButton />
+
       </div>
       <p className="text-center mb-6">
         Server Time: {data.time}
@@ -85,7 +86,7 @@ function TimeBasedISRCard({ timestamp }: { timestamp: string }) {
     <Card className="border-green-200">
       <CardHeader className="bg-green-50 dark:bg-green-950/20">
         <CardTitle>Time-Based ISR</CardTitle>
-        <CardDescription>Revalidates every 5 seconds</CardDescription>
+        <CardDescription>Revalidates every 10 seconds</CardDescription>
       </CardHeader>
       <CardContent>
         {/* Use a key that includes the timestamp to force a refresh when the page is reloaded */}

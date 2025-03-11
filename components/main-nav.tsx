@@ -5,10 +5,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 
 const navItems = [
-  { href: "/", label: "All Strategies" },
-  { href: "/isr", label: "Time-Based ISR" },
-  { href: "/on-demand", label: "On-Demand ISR" },
-  { href: "/ssr", label: "Server-Side Rendering" },
+  { href: "/", label: "Render Methods" },
   { href: "/debug", label: "Debug Info" },
 ]
 
